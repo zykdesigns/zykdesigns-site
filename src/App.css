@@ -14,4 +14,99 @@
   box-sizing: border-box;
   font-family: 'Montserrat';
   font-weight: inherit;
+  font-weight: 300;
+}
+
+.centered-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--dove);
+}
+
+.signature {
+  position: fixed;
+  height: clamp(50px, 400px, 30vw);
+  right: -175px;
+  top: 75px;
+}
+
+.landing {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: clamp(250px, 60%, 100%);
+}
+
+.welcome-area {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.welcome-msg {
+  color: var(--black);
+  max-width: 400px;
+  margin-top: 45px;
+  font-size: 1rem;
+}
+
+.logo {
+  width: clamp(250px, 30vw, 100%);
+}
+
+.button-area {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 0px;
+  margin-top: 35px;
+}
+
+.button-1 {
+  font-weight: 400;
+  border: 2px solid var(--black);
+  width: clamp(200px, 400px, 90%);
+  height: 45px;
+  background: none;
+  color: var(--black);
+  font-size: 1rem;
+  box-shadow: inset 0 0 0 0.09px var(--black);
+  transition: ease-out 0.3s;
+  margin: 10px;
+}
+
+.button-1:hover {
+  box-shadow: inset 0 45px 0 0.09px var(--black);
+  color: var(--white);
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .button-area {
+    flex-direction: column;
+  }
+  .button-1 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  .landing {
+    width: 85%;
+  }
+  .signature {
+    position: fixed;
+    height: clamp(50px, 400px, 30vh);
+    right: -175px;
+    top: 5px;
+  }
 }
